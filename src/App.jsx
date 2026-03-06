@@ -15,7 +15,14 @@ function App() {
       <label>Celsius</label>
       <input type="number"
       value={celsius}
-      onChange = {(e) => setCelsius(e.target.value)}
+      onChange = {(e) => {
+        const value = (e.target.value);
+        setCelsius(value);
+
+        const f = (value * 9/5) + 32;
+        setFahrenheit(f);
+      }}
+
 
       />
     </div>
@@ -23,7 +30,13 @@ function App() {
       <label>fahrenheit</label>
       <input type="number" 
       value={fahrenheit}
-      onChange = {(e) => setFahrenheit(e.target.value)}
+      onChange = {(e) => {
+        const value = e.target.value;
+        setFahrenheit(value);
+
+        const c = (value - 32) * 5/9;
+        setCelsius(c);
+      } }
       
       />
     </div>
