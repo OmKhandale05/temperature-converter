@@ -4,9 +4,21 @@ function App() {
   
 
   return (
-  <div>
-    <h1>hello</h1>
+    <div>
+    <h1>Temperature Converter</h1>
+
+    <div>
+      <label>Celsius</label>
+      <input type="number" />
     </div>
+    <div>
+      <label>fahrenheit</label>
+      <input type="number" />
+    </div>
+
+    </div>
+    
+    
   );
 }
 
