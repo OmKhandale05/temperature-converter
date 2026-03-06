@@ -1,4 +1,4 @@
-import './App.css'
+import './App.css';
 import CurrencyConverter from './components/CurrencyConverter';
 import TemperatureConverter from './components/TemperatureConverter';
 
