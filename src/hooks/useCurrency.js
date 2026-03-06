@@ -13,15 +13,22 @@ const useCurrency = () =>{
     const handleUsd = (e) => {
         const value = e.target.value;
         setUSD(value);
-        setINR(value * rate);
+
+        if(rate){
+            setINR(value * rate);
+        }
     }
+        
 
     const handleInr = (e) => {
         const value = e.target.value;
         setINR(value);
-        setUSD(value / rate);
+        if(rate){
+            setUSD(value / rate);
+        }
+        
     }
-    return{ usd, inr, handleUsd, handleInr}
+    return{ usd, inr, rate, handleUsd, handleInr}
 }
 
 export default useCurrency;

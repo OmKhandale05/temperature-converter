@@ -6,7 +6,7 @@ import useTemperature from './hooks/useTemperature';
 function App() {
 
   const {celsius, fahrenheit, handleCelcius, handleFahrenheit} = useTemperature();
-  const {usd, inr, handleUsd, handleInr} = useCurrency();
+  const {usd, inr, rate, handleUsd, handleInr} = useCurrency();
 
   
 
@@ -41,6 +41,7 @@ function App() {
 
       <div>
         <h1>Currency Converter</h1>
+        <p>1 USD = {rate} INR</p>
         <div className='input-field'>
           <label>USD</label>
 
