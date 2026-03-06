@@ -13,15 +13,22 @@ function App() {
 
     <div>
       <label>Celsius</label>
-      <input type="number" />
+      <input type="number"
+      value={celsius}
+      onChange = {(e) => setCelsius(e.target.value)}
+
+      />
     </div>
     <div>
       <label>fahrenheit</label>
-      <input type="number" />
+      <input type="number" 
+      value={fahrenheit}
+      onChange = {(e) => setFahrenheit(e.target.value)}
+      
+      />
     </div>
 
     </div>
-    
     
   );
 }
