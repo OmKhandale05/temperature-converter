@@ -8,11 +8,12 @@ function App() {
   
 
   return (
-    <div>
+    <div className='container'>
     <h1>Temperature Converter</h1>
 
-    <div>
+    <div className='input-field'>
       <label>Celsius</label>
+
       <input type="number"
       value={celsius}
       onChange = {(e) => {
@@ -20,15 +21,15 @@ function App() {
         setCelsius(value);
 
         const f = (value * 9/5) + 32;
-        setFahrenheit(f);
+        setFahrenheit(f) ;
       }}
-
-
       />
+      <span> °C </span>
     </div>
-    <div>
+    <div className='input-field'>
       <label>fahrenheit</label>
-      <input type="number" 
+
+      <input type="number"
       value={fahrenheit}
       onChange = {(e) => {
         const value = e.target.value;
@@ -39,6 +40,7 @@ function App() {
       } }
       
       />
+      <span> °F </span>
     </div>
 
     </div>

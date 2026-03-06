@@ -1,0 +1,33 @@
+.container {
+  width: 450px;
+  height: 200px;
+  margin: 120px auto;
+  padding: 30px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.input-field{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 15px 0;
+
+  
+}
+
+.input-field input{
+  flex: 1;
+  padding: 8px;
+  margin: 0 10px;
+  /* margin-right: 5px; */
+  font-size: 16px;
+}
+
+.input-field label{
+  width: 120px;
+  text-align: left;
+  
+}
