@@ -1,28 +1,12 @@
 import { useState } from 'react';
 import './App.css'
+import useTemperature from './hooks/useTemperature';
 
 function App() {
 
-  const [celsius, setCelsius] = useState("");
-  const [fahrenheit, setFahrenheit] = useState("");
+  const {celsius, fahrenheit, handleCelcius, handleFahrenheit} = useTemperature();
+
   
-
-  const handleCelcius = (e) => {
-
-    const value = e.target.value;
-    setCelsius(value);
-
-    const f = (value * 9/5) + 32;
-    setFahrenheit(f);
-  }  
-
-  const handleFahrenheit = (e) => {
-    const value = e.target.value;
-    setFahrenheit(value);
-
-    const c = (value - 32)* 5/9;
-    setCelsius(c);
-  }
 
 
   return (
