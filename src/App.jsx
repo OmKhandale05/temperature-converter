@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import './App.css'
+import TemperatureConverter from './components/TemperatureConverter';
 import useCurrency from './hooks/useCurrency';
 import useTemperature from './hooks/useTemperature';
 
 function App() {
 
-  const {celsius, fahrenheit, handleCelcius, handleFahrenheit} = useTemperature();
+  
   const {usd, inr, rate, handleUsd, handleInr} = useCurrency();
 
   
@@ -14,30 +15,8 @@ function App() {
   return (
 
     <div className='container'>
-      <div>
-        <h1>Temperature Converter</h1>
-
-        <div className='input-field'>
-          <label>Celsius</label>
-
-          <input type="number"
-          value={celsius}
-          onChange = {handleCelcius}
-          />
-          <span> °C </span>
-        </div>
-        <div className='input-field'>
-          <label>fahrenheit</label>
-
-          <input type="number"
-          value={fahrenheit}
-          onChange = {handleFahrenheit}
-          
-          />
-          <span> °F </span>
-        </div>
-
-      </div>
+      
+      <TemperatureConverter/>
 
       <div>
         <h1>Currency Converter</h1>
