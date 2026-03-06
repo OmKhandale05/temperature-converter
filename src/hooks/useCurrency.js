@@ -1,11 +1,14 @@
 import { useState } from "react";
+import useCurrencyRate from "./useCurrencyRate";
 
 const useCurrency = () =>{
 
     const [usd, setUSD] = useState("");
     const [inr, setINR] = useState("");
 
-    const rate = 91.7;
+    const rate = useCurrencyRate();
+
+    // const rate = 91.7;
 
     const handleUsd = (e) => {
         const value = e.target.value;
