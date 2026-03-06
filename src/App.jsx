@@ -1,6 +1,10 @@
+import { useState } from 'react';
 import './App.css'
 
 function App() {
+
+  const [celsius, setCelsius] = useState("");
+  const [fahrenheit, setFahrenheit] = useState("");
   
 
   return (
