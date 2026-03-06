@@ -7,6 +7,24 @@ function App() {
   const [fahrenheit, setFahrenheit] = useState("");
   
 
+  const handleCelcius = (e) => {
+
+    const value = e.target.value;
+    setCelsius(value);
+
+    const f = (value * 9/5) + 32;
+    setFahrenheit(f);
+  }  
+
+  const handleFahrenheit = (e) => {
+    const value = e.target.value;
+    setFahrenheit(value);
+
+    const c = (value - 32)* 5/9;
+    setCelsius(c);
+  }
+
+
   return (
     <div className='container'>
     <h1>Temperature Converter</h1>
@@ -16,13 +34,7 @@ function App() {
 
       <input type="number"
       value={celsius}
-      onChange = {(e) => {
-        const value = (e.target.value);
-        setCelsius(value);
-
-        const f = (value * 9/5) + 32;
-        setFahrenheit(f) ;
-      }}
+      onChange = {handleCelcius}
       />
       <span> °C </span>
     </div>
@@ -31,13 +43,7 @@ function App() {
 
       <input type="number"
       value={fahrenheit}
-      onChange = {(e) => {
-        const value = e.target.value;
-        setFahrenheit(value);
-
-        const c = (value - 32) * 5/9;
-        setCelsius(c);
-      } }
+      onChange = {handleFahrenheit}
       
       />
       <span> °F </span>
