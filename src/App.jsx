@@ -1,21 +1,15 @@
-import './App.css';
-import CurrencyConverter from './components/CurrencyConverter';
-import TemperatureConverter from './components/TemperatureConverter';
-
+import "./App.css";
+import CurrencyConverter from "./components/CurrencyConverter";
+import TemperatureConverter from "./components/TemperatureConverter";
 
 function App() {
-
   return (
+    <div className="container">
+      <TemperatureConverter />
 
-    <div className='container'>
-
-      <TemperatureConverter/>
-
-      <CurrencyConverter/>
-
+      <CurrencyConverter />
     </div>
-  
   );
 }
 
-export default App
+export default App;
